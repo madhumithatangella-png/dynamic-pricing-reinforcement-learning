@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+.env
+
+# Logs
+outputs/pipeline.log
+
+# Processed data
+data/processed/
+
+# Model files (future phases)
+models/

@@ -1,0 +1,247 @@
+{
+    "shape": {
+        "rows": 119390,
+        "columns": 32
+    },
+    "missing_values": {
+        "total_missing_cells": 129425,
+        "columns_with_missing": {
+            "children": {
+                "missing_count": 4,
+                "missing_percentage": 0.003350364352123293
+            },
+            "country": {
+                "missing_count": 488,
+                "missing_percentage": 0.40874445095904177
+            },
+            "agent": {
+                "missing_count": 16340,
+                "missing_percentage": 13.686238378423655
+            },
+            "company": {
+                "missing_count": 112593,
+                "missing_percentage": 94.30689337465449
+            }
+        }
+    },
+    "duplicates": {
+        "duplicate_count": 31994,
+        "duplicate_percentage": 26.797889270458164
+    },
+    "column_datatypes": {
+        "hotel": "object",
+        "is_canceled": "int64",
+        "lead_time": "int64",
+        "arrival_date_year": "int64",
+        "arrival_date_month": "object",
+        "arrival_date_week_number": "int64",
+        "arrival_date_day_of_month": "int64",
+        "stays_in_weekend_nights": "int64",
+        "stays_in_week_nights": "int64",
+        "adults": "int64",
+        "children": "float64",
+        "babies": "int64",
+        "meal": "object",
+        "country": "object",
+        "market_segment": "object",
+        "distribution_channel": "object",
+        "is_repeated_guest": "int64",
+        "previous_cancellations": "int64",
+        "previous_bookings_not_canceled": "int64",
+        "reserved_room_type": "object",
+        "assigned_room_type": "object",
+        "booking_changes": "int64",
+        "deposit_type": "object",
+        "agent": "float64",
+        "company": "float64",
+        "days_in_waiting_list": "int64",
+        "customer_type": "object",
+        "adr": "float64",
+        "required_car_parking_spaces": "int64",
+        "total_of_special_requests": "int64",
+        "reservation_status": "object",
+        "reservation_status_date": "object"
+    },
+    "basic_statistics": {
+        "is_canceled": {
+            "mean": 0.37041628277075134,
+            "std": 0.4829182265925984,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 1.0,
+            "max": 1.0
+        },
+        "lead_time": {
+            "mean": 104.01141636652986,
+            "std": 106.86309704798794,
+            "min": 0.0,
+            "25%": 18.0,
+            "50%": 69.0,
+            "75%": 160.0,
+            "max": 737.0
+        },
+        "arrival_date_year": {
+            "mean": 2016.156554150264,
+            "std": 0.7074759445203559,
+            "min": 2015.0,
+            "25%": 2016.0,
+            "50%": 2016.0,
+            "75%": 2017.0,
+            "max": 2017.0
+        },
+        "arrival_date_week_number": {
+            "mean": 27.16517296255968,
+            "std": 13.60513835549767,
+            "min": 1.0,
+            "25%": 16.0,
+            "50%": 28.0,
+            "75%": 38.0,
+            "max": 53.0
+        },
+        "arrival_date_day_of_month": {
+            "mean": 15.798241058715135,
+            "std": 8.780829470578345,
+            "min": 1.0,
+            "25%": 8.0,
+            "50%": 16.0,
+            "75%": 23.0,
+            "max": 31.0
+        },
+        "stays_in_weekend_nights": {
+            "mean": 0.9275986263506156,
+            "std": 0.9986134945978767,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 1.0,
+            "75%": 2.0,
+            "max": 19.0
+        },
+        "stays_in_week_nights": {
+            "mean": 2.500301532791691,
+            "std": 1.9082856150479095,
+            "min": 0.0,
+            "25%": 1.0,
+            "50%": 2.0,
+            "75%": 3.0,
+            "max": 50.0
+        },
+        "adults": {
+            "mean": 1.8564033838679956,
+            "std": 0.5792609988327557,
+            "min": 0.0,
+            "25%": 2.0,
+            "50%": 2.0,
+            "75%": 2.0,
+            "max": 55.0
+        },
+        "children": {
+            "mean": 0.10388990333874994,
+            "std": 0.3985614447864417,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 10.0
+        },
+        "babies": {
+            "mean": 0.007948739425412514,
+            "std": 0.09743619130126437,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 10.0
+        },
+        "is_repeated_guest": {
+            "mean": 0.03191222045397437,
+            "std": 0.17576714541065658,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 1.0
+        },
+        "previous_cancellations": {
+            "mean": 0.08711784906608594,
+            "std": 0.8443363841545105,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 26.0
+        },
+        "previous_bookings_not_canceled": {
+            "mean": 0.13709690928888515,
+            "std": 1.4974368477076776,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 72.0
+        },
+        "booking_changes": {
+            "mean": 0.22112404724013737,
+            "std": 0.6523055726747721,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 21.0
+        },
+        "agent": {
+            "mean": 86.69338185346919,
+            "std": 110.77454764295149,
+            "min": 1.0,
+            "25%": 9.0,
+            "50%": 14.0,
+            "75%": 229.0,
+            "max": 535.0
+        },
+        "company": {
+            "mean": 189.26673532440782,
+            "std": 131.65501463851223,
+            "min": 6.0,
+            "25%": 62.0,
+            "50%": 179.0,
+            "75%": 270.0,
+            "max": 543.0
+        },
+        "days_in_waiting_list": {
+            "mean": 2.321149174972778,
+            "std": 17.594720878776215,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 391.0
+        },
+        "adr": {
+            "mean": 101.83112153446686,
+            "std": 50.535790285548714,
+            "min": -6.38,
+            "25%": 69.29,
+            "50%": 94.575,
+            "75%": 126.0,
+            "max": 5400.0
+        },
+        "required_car_parking_spaces": {
+            "mean": 0.06251779881062065,
+            "std": 0.2452911474674936,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 8.0
+        },
+        "total_of_special_requests": {
+            "mean": 0.5713627607002262,
+            "std": 0.7927984228094114,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 1.0,
+            "max": 5.0
+        }
+    }
+}

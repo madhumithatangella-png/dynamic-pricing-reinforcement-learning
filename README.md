@@ -1,23 +1,68 @@
 # Dynamic Pricing using Reinforcement Learning
 
-## Project Overview
+An industry-level Reinforcement Learning project designed to optimize hotel room pricing dynamically based on demand, lead time, and guest demographics.
 
-This project aims to build an intelligent pricing agent using Reinforcement Learning (RL) for the travel and hospitality industry. The agent learns optimal pricing strategies by interacting with a simulated market environment to maximize total revenue.
+## Phase 1: Data Pipeline & Exploratory Data Analysis (EDA)
 
-## Tech Stack
+This phase establishes the foundational data loading, validation, pre-processing, feature engineering, and exploratory data analysis.
 
-- Python
-- Gymnasium
-- PyTorch
-- NumPy
-- Pandas
-- Matplotlib
+### Project Structure
 
-## Project Status
+```text
+Dynamic-Pricing-RL/
+├── data/
+│   ├── raw/
+│   │   └── hotel_bookings.csv
+│   ├── processed/
+│   └── external/
+├── notebooks/
+│   └── 01_EDA.ipynb
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── logger.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── data_loader.py
+│   │   ├── data_validator.py
+│   │   ├── data_preprocessing.py
+│   │   └── feature_engineering.py
+│   └── visualization/
+│       ├── __init__.py
+│       └── eda.py
+├── outputs/
+│   ├── figures/
+│   ├── reports/
+│   └── pipeline.log
+├── tests/
+├── requirements.txt
+├── requirements-dev.txt
+└── README.md
+```
 
-- [x] Repository initialized
-- [ ] Custom Gym Environment
-- [ ] Q-Learning Agent
-- [ ] Deep Q Network (DQN)
-- [ ] Performance Evaluation
-- [ ] Streamlit Dashboard
+### Installation
+
+To set up the project runtime dependencies, run:
+```bash
+pip install -r requirements.txt
+```
+
+To install dev dependencies:
+```bash
+pip install -r requirements-dev.txt
+```
+
+### Running the Pipeline
+
+Run the end-to-end data pipeline (load, validate, clean, engineer features, generate plots):
+```bash
+python src/main.py
+```
+
+### Testing
+
+Run the test suite:
+```bash
+pytest
+```

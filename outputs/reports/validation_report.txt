@@ -1,0 +1,151 @@
+============================================================
+            DATASET VALIDATION REPORT
+============================================================
+
+--- DATASET SUMMARY ---
+Number of Rows:    119390
+Number of Columns: 32
+Duplicate Rows:    31994 (26.80%)
+Total Missing:     129425
+
+--- MISSING VALUES PER COLUMN ---
+- children: 4 missing (0.0034%)
+- country: 488 missing (0.4087%)
+- agent: 16340 missing (13.6862%)
+- company: 112593 missing (94.3069%)
+
+--- DATATYPE SCHEMAS ---
+- hotel: object
+- is_canceled: int64
+- lead_time: int64
+- arrival_date_year: int64
+- arrival_date_month: object
+- arrival_date_week_number: int64
+- arrival_date_day_of_month: int64
+- stays_in_weekend_nights: int64
+- stays_in_week_nights: int64
+- adults: int64
+- children: float64
+- babies: int64
+- meal: object
+- country: object
+- market_segment: object
+- distribution_channel: object
+- is_repeated_guest: int64
+- previous_cancellations: int64
+- previous_bookings_not_canceled: int64
+- reserved_room_type: object
+- assigned_room_type: object
+- booking_changes: int64
+- deposit_type: object
+- agent: float64
+- company: float64
+- days_in_waiting_list: int64
+- customer_type: object
+- adr: float64
+- required_car_parking_spaces: int64
+- total_of_special_requests: int64
+- reservation_status: object
+- reservation_status_date: object
+
+--- STATISTICAL PROFILE FOR NUMERICAL COLUMNS ---
+
+[is_canceled]
+  Mean: 0.3704 | Std Dev: 0.4829
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  1.0000 | Max: 1.0000
+
+[lead_time]
+  Mean: 104.0114 | Std Dev: 106.8631
+  Min:  0.0000 | 25%: 18.0000 | 50%: 69.0000
+  75%:  160.0000 | Max: 737.0000
+
+[arrival_date_year]
+  Mean: 2016.1566 | Std Dev: 0.7075
+  Min:  2015.0000 | 25%: 2016.0000 | 50%: 2016.0000
+  75%:  2017.0000 | Max: 2017.0000
+
+[arrival_date_week_number]
+  Mean: 27.1652 | Std Dev: 13.6051
+  Min:  1.0000 | 25%: 16.0000 | 50%: 28.0000
+  75%:  38.0000 | Max: 53.0000
+
+[arrival_date_day_of_month]
+  Mean: 15.7982 | Std Dev: 8.7808
+  Min:  1.0000 | 25%: 8.0000 | 50%: 16.0000
+  75%:  23.0000 | Max: 31.0000
+
+[stays_in_weekend_nights]
+  Mean: 0.9276 | Std Dev: 0.9986
+  Min:  0.0000 | 25%: 0.0000 | 50%: 1.0000
+  75%:  2.0000 | Max: 19.0000
+
+[stays_in_week_nights]
+  Mean: 2.5003 | Std Dev: 1.9083
+  Min:  0.0000 | 25%: 1.0000 | 50%: 2.0000
+  75%:  3.0000 | Max: 50.0000
+
+[adults]
+  Mean: 1.8564 | Std Dev: 0.5793
+  Min:  0.0000 | 25%: 2.0000 | 50%: 2.0000
+  75%:  2.0000 | Max: 55.0000
+
+[children]
+  Mean: 0.1039 | Std Dev: 0.3986
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 10.0000
+
+[babies]
+  Mean: 0.0079 | Std Dev: 0.0974
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 10.0000
+
+[is_repeated_guest]
+  Mean: 0.0319 | Std Dev: 0.1758
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 1.0000
+
+[previous_cancellations]
+  Mean: 0.0871 | Std Dev: 0.8443
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 26.0000
+
+[previous_bookings_not_canceled]
+  Mean: 0.1371 | Std Dev: 1.4974
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 72.0000
+
+[booking_changes]
+  Mean: 0.2211 | Std Dev: 0.6523
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 21.0000
+
+[agent]
+  Mean: 86.6934 | Std Dev: 110.7745
+  Min:  1.0000 | 25%: 9.0000 | 50%: 14.0000
+  75%:  229.0000 | Max: 535.0000
+
+[company]
+  Mean: 189.2667 | Std Dev: 131.6550
+  Min:  6.0000 | 25%: 62.0000 | 50%: 179.0000
+  75%:  270.0000 | Max: 543.0000
+
+[days_in_waiting_list]
+  Mean: 2.3211 | Std Dev: 17.5947
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 391.0000
+
+[adr]
+  Mean: 101.8311 | Std Dev: 50.5358
+  Min:  -6.3800 | 25%: 69.2900 | 50%: 94.5750
+  75%:  126.0000 | Max: 5400.0000
+
+[required_car_parking_spaces]
+  Mean: 0.0625 | Std Dev: 0.2453
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  0.0000 | Max: 8.0000
+
+[total_of_special_requests]
+  Mean: 0.5714 | Std Dev: 0.7928
+  Min:  0.0000 | 25%: 0.0000 | 50%: 0.0000
+  75%:  1.0000 | Max: 5.0000

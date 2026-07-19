@@ -23,13 +23,27 @@ REPORTS_DIR = OUTPUT_DIR / "reports"
 LOG_FILE_PATH = OUTPUT_DIR / "pipeline.log"
 VALIDATION_JSON_PATH = REPORTS_DIR / "validation_report.json"
 VALIDATION_TXT_PATH = REPORTS_DIR / "validation_report.txt"
+MODELS_DIR = OUTPUT_DIR / "models"
 
 # Ensure all directories exist
-for directory in [DATA_DIR / "processed", FIGURES_DIR, REPORTS_DIR]:
+for directory in [DATA_DIR / "processed", FIGURES_DIR, REPORTS_DIR, MODELS_DIR]:
     directory.mkdir(parents=True, exist_ok=True)
 
 # Random Seed for Reproducibility
 RANDOM_SEED = 42
+RL_RANDOM_SEED = 42
+
+# RL Configurations
+PRICE_ACTIONS: List[float] = [3000.0, 3500.0, 4000.0, 4500.0, 5000.0, 5500.0, 6000.0, 6500.0, 7000.0]
+MAX_INVENTORY: int = 50
+MAX_DAYS: int = 100
+ALPHA: float = 0.1
+GAMMA: float = 0.99
+EPSILON: float = 1.0
+EPSILON_DECAY: float = 0.995
+MIN_EPSILON: float = 0.01
+EPISODES: int = 1000
+EVALUATION_EPISODES: int = 100
 
 # Outlier Thresholds
 OUTLIER_THRESHOLDS: Dict[str, Any] = {

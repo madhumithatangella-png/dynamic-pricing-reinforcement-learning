@@ -1,8 +1,9 @@
 """Main orchestrator script for the Dynamic Pricing RL data pipeline.
 
-Loads, validates, cleans, engineers features, and generates plots.
+Supports Phase 1 (Data Processing & EDA) and Phase 2 (Reinforcement Learning).
 """
 
+import argparse
 import sys
 from src.config import (
     RAW_DATA_PATH,
@@ -16,11 +17,13 @@ from src.data.data_preprocessing import preprocess_data
 from src.data.feature_engineering import engineer_features
 from src.visualization.eda import generate_all_plots
 from src.logger import get_logger
+from src.rl.trainer import run_training_flow
+from src.rl.evaluator import run_evaluation_flow
 
 logger = get_logger("main_pipeline")
 
 
-def run_pipeline() -> int:
+def run_phase_1() -> int:
     """Executes the complete Phase 1 pipeline end-to-end.
 
     Returns:
@@ -66,5 +69,59 @@ def run_pipeline() -> int:
         return 1
 
 
+def run_phase_2() -> int:
+    """Executes the complete Phase 2 Reinforcement Learning framework.
+
+    Returns:
+        int: Return code. 0 for success, non-zero for failure.
+    """
+    logger.info("=" * 60)
+    logger.info("   STARTING DYNAMIC PRICING RL FRAMEWORK (PHASE 2)")
+    logger.info("=" * 60)
+
+    try:
+        # Step 1: Train Q-Learning Agent
+        agent, env, simulator = run_training_flow()
+
+        # Step 2: Evaluate and compare Q-learning with Baselines
+        df_summary = run_evaluation_flow(q_agent=agent, env=env)
+
+        logger.info("Summary of Evaluation Results:")
+        for idx, row in df_summary.iterrows():
+            logger.info(
+                f"Agent: {row['Agent']:18s} | Revenue: {row['Total Revenue']:10.1f} | "
+                f"Occupancy: {row['Occupancy Rate']:6.2%} | Rooms Sold: {row['Rooms Sold']:4d}"
+            )
+
+        logger.info("=" * 60)
+        logger.info("   PHASE 2 REINFORCEMENT LEARNING RUN SUCCESSFULLY COMPLETED!")
+        logger.info("=" * 60)
+        return 0
+
+    except Exception as e:
+        logger.exception(f"Phase 2 execution failed due to an error: {e}")
+        return 1
+
+
+def main() -> None:
+    """Parses command line arguments and routes execution to selected phase."""
+    parser = argparse.ArgumentParser(
+        description="Dynamic Pricing using Reinforcement Learning Orchestrator."
+    )
+    parser.add_argument(
+        "--phase",
+        type=int,
+        choices=[1, 2],
+        default=1,
+        help="Specify phase to run. Phase 1 (Data/EDA) or Phase 2 (RL/Q-learning). Default is 1.",
+    )
+    args = parser.parse_args()
+
+    if args.phase == 2:
+        sys.exit(run_phase_2())
+    else:
+        sys.exit(run_phase_1())
+
+
 if __name__ == "__main__":
-    sys.exit(run_pipeline())
+    main()

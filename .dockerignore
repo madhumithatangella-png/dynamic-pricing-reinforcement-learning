@@ -1,0 +1,15 @@
+.git
+.gitignore
+.pytest_cache
+.vscode
+.idea
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints
+notebooks/
+tests/
+logs/
+data/raw/
+*.log

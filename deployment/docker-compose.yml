@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: dynamic_pricing_api
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEVICE=cpu
+      - MODEL_PATH=/app/outputs/models
+    volumes:
+      # Mount outputs directory to share metrics logs and weight files
+      - ../outputs:/app/outputs
+    restart: always
+
+  dashboard:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: dynamic_pricing_dashboard
+    command: streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      - API_HOST=api
+      - API_PORT=8000
+    depends_on:
+      - api
+    restart: always

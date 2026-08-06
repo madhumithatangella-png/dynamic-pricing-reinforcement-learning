@@ -45,6 +45,17 @@ MIN_EPSILON: float = 0.01
 EPISODES: int = 1000
 EVALUATION_EPISODES: int = 100
 
+# DQN Configurations
+DQN_EPISODES: int = 600
+BATCH_SIZE: int = 64
+MEMORY_SIZE: int = 10000
+TARGET_UPDATE: int = 10  # target update frequency in episodes
+LEARNING_RATE: float = 1e-3
+HIDDEN_UNITS: List[int] = [64, 64]
+DEVICE: str = "cuda"  # Preference: will fallback to cpu if cuda is unavailable
+SAVE_MODEL_EVERY: int = 100
+DQN_RANDOM_SEED: int = 42
+
 # Outlier Thresholds
 OUTLIER_THRESHOLDS: Dict[str, Any] = {
     "adr_min": 0.0,
